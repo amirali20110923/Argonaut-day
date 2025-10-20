@@ -10,6 +10,46 @@ body {
   align-items: center;
 }
 
+  /* Стили для заголовка */
+  header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+  }
+  
+  nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .logo {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu li {
+      margin: 0 15px;
+  }
+  
+  .menu a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+      color: #ddd;
+  }
+
 /* Каждый заголовок — со скруглённым фоном */
 h1 {
   background: rgba(255, 255, 255, 0.8);
@@ -72,3 +112,11 @@ h1 {
     height: 300px;
   }
 }
+
+/* Стили для подвала */
+  footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+  }

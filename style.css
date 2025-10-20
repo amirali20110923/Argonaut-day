@@ -10,6 +10,32 @@ body {
   align-items: center;
 }
 
+header {
+      background: #ff7b00;
+      color: #000000;
+      padding: 10px 0;
+  }
+  
+  nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .logo {
+      color: #000000;
+      text-decoration: none;
+      font-size: 1.5em;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+
 h1 {
   background: rgba(255, 255, 255, 0.8);
   color: #222;
@@ -17,7 +43,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   padding: 10px 15px;
-  margin: 20px 0; /* 🔥 расстояние между всеми h1 */
+  margin: 50px 0; /* 🔥 расстояние между всеми h1 */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 500px;

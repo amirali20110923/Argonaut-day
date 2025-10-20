@@ -10,7 +10,6 @@ body {
   align-items: center;
 }
 
-/* Каждый заголовок — со скруглённым фоном */
 h1 {
   background: rgba(255, 255, 255, 0.8);
   color: #222;
@@ -18,11 +17,12 @@ h1 {
   text-align: center;
   border-radius: 20px;
   padding: 10px 15px;
-  margin: 8px 0;
+  margin: 20px 0; /* 🔥 расстояние между всеми h1 */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 500px;
 }
+
 
 /* Таймер (от megatimer.ru) */
 .me-timer {

@@ -1,0 +1,102 @@
+/* Мобильная версия — всё центрировано, весело и ярко */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffeb3b, #4dd0e1);
+  color: #212121;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+  animation: bgShift 8s infinite alternate ease-in-out;
+}
+
+/* Анимация фона */
+@keyframes bgShift {
+  0% { background: linear-gradient(135deg, #ffeb3b, #4dd0e1); }
+  100% { background: linear-gradient(135deg, #81c784, #ba68c8); }
+}
+
+/* Заголовки */
+h1 {
+  font-size: 20px;
+  margin: 14px 0;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+h1:first-of-type {
+  font-size: 28px;
+  color: #d500f9;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Карта */
+iframe {
+  width: 90%;
+  height: 260px;
+  border: none;
+  border-radius: 16px;
+  margin: 20px auto;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Кнопка “Купить билет” */
+.button-link {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff4081, #f50057);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.4s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.button-link:hover {
+  transform: scale(1.08) rotate(-2deg);
+  background: linear-gradient(45deg, #f50057, #ff80ab);
+}
+
+/* Только мобильные устройства */
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  body::before {
+    content: "📱 Этот сайт доступен только на мобильных устройствах!";
+    font-size: 24px;
+    font-weight: bold;
+    color: #d50000;
+    text-align: center;
+  }
+
+  * {
+    display: none;
+  }
+
+  body::before {
+    display: block;
+  }
+}
+
+/* Анимация заголовков при загрузке */
+h1 {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

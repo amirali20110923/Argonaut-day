@@ -1,102 +1,74 @@
-/* Мобильная версия — всё центрировано, весело и ярко */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
 body {
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffeb3b, #4dd0e1);
-  color: #212121;
-  text-align: center;
+  background: linear-gradient(180deg, #fff8e7, #ffe4e1);
   margin: 0;
-  padding: 20px;
-  overflow-x: hidden;
-  animation: bgShift 8s infinite alternate ease-in-out;
+  padding: 10px;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Анимация фона */
-@keyframes bgShift {
-  0% { background: linear-gradient(135deg, #ffeb3b, #4dd0e1); }
-  100% { background: linear-gradient(135deg, #81c784, #ba68c8); }
-}
-
-/* Заголовки */
+/* Каждый заголовок — со скруглённым фоном */
 h1 {
-  font-size: 20px;
-  margin: 14px 0;
-  line-height: 1.4;
-  font-weight: 600;
-  color: #1a237e;
-}
-
-h1:first-of-type {
-  font-size: 28px;
-  color: #d500f9;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-/* Карта */
-iframe {
+  background: rgba(255, 255, 255, 0.8);
+  color: #222;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 90%;
-  height: 260px;
-  border: none;
-  border-radius: 16px;
-  margin: 20px auto;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  max-width: 500px;
 }
 
-/* Кнопка “Купить билет” */
+/* Таймер (от megatimer.ru) */
+.me-timer {
+  transform: scale(1);
+  transform-origin: center;
+  margin: 10px 0;
+}
+
+/* Кнопка */
 .button-link {
-  display: inline-block;
-  background: linear-gradient(45deg, #ff4081, #f50057);
+  background-color: #ff6f61;
   color: white;
-  padding: 16px 28px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 25px;
   text-decoration: none;
-  margin-top: 20px;
-  transition: 0.4s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+  transition: 0.3s;
 }
-
 .button-link:hover {
-  transform: scale(1.08) rotate(-2deg);
-  background: linear-gradient(45deg, #f50057, #ff80ab);
+  background-color: #ff3b2e;
 }
 
-/* Только мобильные устройства */
-@media (min-width: 700px) {
+/* Мобильный вид */
+@media (max-width: 600px) {
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 10px;
   }
 
-  body::before {
-    content: "📱 Этот сайт доступен только на мобильных устройствах!";
-    font-size: 24px;
-    font-weight: bold;
-    color: #d50000;
+  h1 {
+    font-size: 1em;
+    width: 95%;
+  }
+
+  .button-link {
+    width: 80%;
     text-align: center;
   }
 
-  * {
-    display: none;
+  /* 📱 Уменьшаем виджет таймера */
+  .me-timer {
+    transform: scale(0.8);
+    margin: 5px 0;
   }
 
-  body::before {
-    display: block;
-  }
-}
-
-/* Анимация заголовков при загрузке */
-h1 {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: fadeUp 0.8s forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  iframe {
+    width: 95%;
+    height: 300px;
   }
 }
